@@ -1,0 +1,15 @@
+D:\ProgramPractice\C#\Snake_Game\obj\Debug\net7.0\Snake_Game.csproj.AssemblyReference.cache
+D:\ProgramPractice\C#\Snake_Game\obj\Debug\net7.0\Snake_Game.GeneratedMSBuildEditorConfig.editorconfig
+D:\ProgramPractice\C#\Snake_Game\obj\Debug\net7.0\Snake_Game.AssemblyInfoInputs.cache
+D:\ProgramPractice\C#\Snake_Game\obj\Debug\net7.0\Snake_Game.AssemblyInfo.cs
+D:\ProgramPractice\C#\Snake_Game\obj\Debug\net7.0\Snake_Game.csproj.CoreCompileInputs.cache
+D:\ProgramPractice\C#\Snake_Game\bin\Debug\net7.0\Snake_Game.exe
+D:\ProgramPractice\C#\Snake_Game\bin\Debug\net7.0\Snake_Game.deps.json
+D:\ProgramPractice\C#\Snake_Game\bin\Debug\net7.0\Snake_Game.runtimeconfig.json
+D:\ProgramPractice\C#\Snake_Game\bin\Debug\net7.0\Snake_Game.dll
+D:\ProgramPractice\C#\Snake_Game\bin\Debug\net7.0\Snake_Game.pdb
+D:\ProgramPractice\C#\Snake_Game\obj\Debug\net7.0\Snake_Game.dll
+D:\ProgramPractice\C#\Snake_Game\obj\Debug\net7.0\refint\Snake_Game.dll
+D:\ProgramPractice\C#\Snake_Game\obj\Debug\net7.0\Snake_Game.pdb
+D:\ProgramPractice\C#\Snake_Game\obj\Debug\net7.0\Snake_Game.genruntimeconfig.cache
+D:\ProgramPractice\C#\Snake_Game\obj\Debug\net7.0\ref\Snake_Game.dll
