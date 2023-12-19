@@ -4,8 +4,8 @@ class Snake
 {
     int Height = 20;
     int Width = 30;
-    int[] x = new int[50];
-    int[] y = new int[50];
+    int[] X = new int[50];
+    int[] Y = new int[50];
     int fruitX;
     int fruitY;
     int parts = 3;
@@ -13,7 +13,15 @@ class Snake
     ConsoleKeyInfo keyinfo = new ConsoleKeyInfo();
     char key = 'W';
     Random rnd = new Random();
+    Snake()
+    {
+        X[0] = 5;
+        Y[0] = 5;
+        Console.CursorVisible = false;
+        fruitX = rnd.Next(2, (Width - 2));
+        fruitY = rnd.Next(2, (Height - 2));
 
+    }
     void WriteBoard()
     {
         Console.Clear();
@@ -41,34 +49,66 @@ class Snake
 
     public void Input()
     {
-        if(Console.KeyAvailable){
+        if (Console.KeyAvailable)
+        {
             keyinfo = Console.ReadKey(true);
             key = keyinfo.KeyChar;
         }
     }
 
-    public void WritePoint(int x, int y){
-        Console.SetCursorPosition(x,y);
+    public void WritePoint(int x, int y)
+    {
+        Console.SetCursorPosition(x, y);
         Console.Write("#");
     }
 
-    public void Logic(){
-        if(x[0] == fruitX)
+    public void Logic()
+    {
+        if (X[0] == fruitX)
         {
-            if(y[0] == fruitY)
+            if (Y[0] == fruitY)
             {
                 parts++;
-                fruitX = rnd.Next(2, (Width -2));
-                fruitY - rnd.Next(2, (Height -2));
+                fruitX = rnd.Next(2, (Width - 2));
+                fruitY = rnd.Next(2, (Height - 2));
             }
         }
-        for(int i)
+        for (int i = parts; i > 1; i--)
+        {
+            X[i - 1] = X[i - 2];
+            Y[i - 1] = Y[i - 2];
+        }
+        switch (key)
+        {
+            case 'w':
+                Y[0]--;
+                break;
+            case 's':
+                Y[0]++;
+                break;
+            case 'd':
+                X[0]++;
+                break;
+            case 'a':
+                X[0]--;
+                break;
+        }
+        for (int i = 0; i <= (parts - 1); i++)
+        {
+            WritePoint(X[i], Y[i]);
+            WritePoint(fruitX, fruitY);
+        }
+        Thread.Sleep(100);
     }
     static void Main(string[] args)
     {
         Snake snake = new Snake();
-        snake.WriteBoard();
-        snake.Input();
+        while (true)
+        {
+            snake.WriteBoard();
+            snake.Input();
+            snake.Logic();
+        }
         Console.ReadKey();
     }
 
