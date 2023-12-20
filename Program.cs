@@ -2,7 +2,7 @@
 namespace MyProject;
 class Snake
 {
-    int Height = 20;
+   public int Height = 20;
     int Width = 30;
     int[] X = new int[50];
     int[] Y = new int[50];
@@ -38,12 +38,12 @@ class Snake
         for (int i = 1; i <= (Height + 1); i++)
         {
             Console.SetCursorPosition(1, i);
-            Console.Write("-");
+            Console.Write("|");
         }
         for (int i = 1; i <= (Height + 1); i++)
         {
-            Console.SetCursorPosition((Width + 1), 1);
-            Console.Write("-");
+            Console.SetCursorPosition((Width + 2), 1);
+            Console.Write("|");
         }
     }
 
@@ -108,8 +108,10 @@ class Snake
             snake.WriteBoard();
             snake.Input();
             snake.Logic();
+            
         }
         Console.ReadKey();
+        
     }
 
 }
